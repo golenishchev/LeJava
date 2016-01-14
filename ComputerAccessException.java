@@ -1,4 +1,4 @@
-package com.sseraphim.javalessons;
+package com.example.javalessons;
 
 public class ComputerAccessException extends Exception {
     // Default constructor

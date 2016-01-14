@@ -1,10 +1,10 @@
-package com.sseraphim.javalessons;
+package com.example.javalessons;
 
 import java.io.*;
 
 public class FileManager {
 
-    public static void copyFile(String firstFile, String secondFile) throws Exception {
+    public void copyFile(String firstFile, String secondFile) throws Exception {
         try (
                 BufferedReader br = new BufferedReader(new FileReader(firstFile));
                 PrintWriter pw = new PrintWriter(new FileWriter(secondFile))
@@ -20,7 +20,7 @@ public class FileManager {
 
     }
 
-    public static void deleteFile(String fileToBeDeleted) {
+    public void deleteFile(String fileToBeDeleted) {
 
         try {
             File file = new File(fileToBeDeleted);
@@ -32,13 +32,5 @@ public class FileManager {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    public static void main(String[] args) throws Exception {
-        String firstFile = "first.txt";
-        String secondFile = "second3.txt";
-        String fileToBeDeleted = "second3.txt";
-        copyFile(firstFile, secondFile);
-        deleteFile(fileToBeDeleted);
     }
 }

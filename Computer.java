@@ -1,4 +1,4 @@
-package com.sseraphim.javalessons;
+package com.example.javalessons;
 
 import java.util.Scanner;
 
