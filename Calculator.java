@@ -1,7 +1,7 @@
-package com.example.javalessons;
+        package com.example.javalessons;
 
-import java.util.Locale;
-import java.util.Scanner;
+        import java.util.Locale;
+        import java.util.Scanner;
 
 public class Calculator {
     public double resultValue;
@@ -13,7 +13,28 @@ public class Calculator {
     public double operand1;
     public String operation;
     public double operand2;
-    public boolean computerStatus;
+  //  private boolean computerStatus;
+
+ /*   public void turnOnCalc() {
+        System.out.println("Type 1 and press Enter to run Calculator");
+        System.out.println("Type 2 not to run");
+        Scanner sc = new Scanner(System.in);
+        switch (sc.nextInt()) {
+            case 1:
+                System.out.println("It's alive!");
+
+                break;
+            case 2:
+                System.out.println("Give me the power and nobody gets hurt! Please!");
+                System.out.println("Computer power not turned on. Do you know what \"eien\" means in Japanese?\n"); // it means "eternity"
+                turnOnCalc();
+                break;
+            default:
+                System.out.println("You can choose only between 1 and 2");
+                turnOnCalc();
+                break;
+        }
+    }*/
 
     public double getSum(double operand1, double operand2) {
         return resultValue = operand1 + operand2;
@@ -39,14 +60,6 @@ public class Calculator {
         return sineCalcResult = Math.sin(angleBeforeSineCalc);
     }
 
-    public void runCalculator(boolean computerStatus) throws ComputerAccessException {
-        this.computerStatus = computerStatus;
-        if (computerStatus) {
-            System.out.println("Computer works");
-        } else {
-            throw new ComputerAccessException("You can't use this program because computer is off\n");
-        }
-    }
     /* Array */
 
     public void findMaxInAnArray(int[] array) {
@@ -66,4 +79,7 @@ public class Calculator {
             System.out.println();
         }
     }
+
 }
+
+

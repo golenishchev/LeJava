@@ -7,6 +7,7 @@ public class Main {
 
     public static void main(String args[]) throws Exception {
         Computer myComp = new Computer(); //  object myComp
+        myComp.computerStatusOn = true;
         myComp.setPowerSupply(450);
         myComp.setProcessor(2.4f);
         myComp.setVideoCard(11);
@@ -24,10 +25,11 @@ public class Main {
 
         Calculator myCalc = new Calculator();
         try {
-            myCalc.runCalculator(false);
+            myCalc = myComp.runCalculator();
         } catch (ComputerAccessException e) {
-            System.err.print(e);
+            e.printStackTrace();
         }
+
         double resultValue = myCalc.getSum(myCalc.operand1, myCalc.operand2);
         myCalc.printResult(resultValue);
         myCalc.getDiv(10, 2);

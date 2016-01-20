@@ -7,6 +7,7 @@ public class Computer implements java.io.Serializable { // Creating class Comput
     private float processor;
     private int videoCard;
     private String motherBoard;
+    boolean computerStatusOn;
 
     public Computer() { // default constructor
     }
@@ -67,6 +68,7 @@ public class Computer implements java.io.Serializable { // Creating class Comput
                 turnOnComputer();
                 break;
         }
+
     }
 
     public void chooseWhatToDoNext() {
@@ -162,4 +164,16 @@ public class Computer implements java.io.Serializable { // Creating class Comput
     public void installFileManager() {
         System.out.println("FileManager installed");
     }
+
+    public Calculator runCalculator() throws ComputerAccessException {
+        this.computerStatusOn = computerStatusOn;
+
+        if (computerStatusOn) {
+            System.out.println("Computer is On and Calculator can run");
+        } else {
+            throw new ComputerAccessException("You can't use this program because computer is off\n");
+        }
+        return null;
+    }
 }
+
