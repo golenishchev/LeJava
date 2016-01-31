@@ -165,15 +165,14 @@ public class Computer implements java.io.Serializable { // Creating class Comput
         System.out.println("FileManager installed");
     }
 
-    public Calculator runCalculator() throws ComputerAccessException {
-        this.computerStatusOn = computerStatusOn;
+    public void runCalculator() throws ComputerAccessException {
 
         if (computerStatusOn) {
             System.out.println("Computer is On and Calculator can run");
         } else {
             throw new ComputerAccessException("You can't use this program because computer is off\n");
         }
-        return null;
+
     }
 }
 

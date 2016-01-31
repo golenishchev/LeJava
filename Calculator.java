@@ -1,75 +1,60 @@
-        package com.example.javalessons;
-
-        import java.util.Locale;
-        import java.util.Scanner;
+package com.example.javalessons;
 
 public class Calculator {
-    public double resultValue;
-    public double divResultValue;
-    public double numberBeforeSquareRootExtraction;
-    public double squareRootCalcResult;
-    public double angleBeforeSineCalc;
-    public double sineCalcResult;
-    public double operand1;
-    public String operation;
-    public double operand2;
-  //  private boolean computerStatus;
+    private double resultValue;
+    private double divResultValue;
+    private double operand1;
+    private String operation;
+    private double operand2;
 
- /*   public void turnOnCalc() {
-        System.out.println("Type 1 and press Enter to run Calculator");
-        System.out.println("Type 2 not to run");
-        Scanner sc = new Scanner(System.in);
-        switch (sc.nextInt()) {
-            case 1:
-                System.out.println("It's alive!");
+    //  private boolean computerStatus;
 
-                break;
-            case 2:
-                System.out.println("Give me the power and nobody gets hurt! Please!");
-                System.out.println("Computer power not turned on. Do you know what \"eien\" means in Japanese?\n"); // it means "eternity"
-                turnOnCalc();
-                break;
-            default:
-                System.out.println("You can choose only between 1 and 2");
-                turnOnCalc();
-                break;
-        }
-    }*/
 
-    public double getSum(double operand1, double operand2) {
+    public double getSum() {
         return resultValue = operand1 + operand2;
+    }
+
+    public double getResultValue() {
+        return resultValue;
+    }
+
+
+    public double getDivResultValue() {
+        divResultValue = operand1 / operand2;
+        return divResultValue;
+    }
+
+    public double getOperand1() {
+        return operand1;
+    }
+
+    public void setOperand1(double operand1) {
+        this.operand1 = operand1;
+    }
+
+    public String getOperation() {
+        return operation;
+    }
+
+    public void setOperation(String operation) {
+        this.operation = operation;
+    }
+
+    public double getOperand2() {
+        return operand2;
+    }
+
+    public void setOperand2(double operand2) {
+        this.operand2 = operand2;
     }
 
     public void printResult(double resultValue) {
         System.out.println("Result value: " + resultValue);
     }
 
-    public double getDiv(double firstNumber, double secondNumber) {
-        return divResultValue = firstNumber / secondNumber;
-    }
-
     /* BEGIN methods of Math class */
 
-    public double getSqrt(double numberBeforeSquareRootExtraction) {
-        this.numberBeforeSquareRootExtraction = numberBeforeSquareRootExtraction;
-        return squareRootCalcResult = Math.sqrt(numberBeforeSquareRootExtraction);
-    }
-
-    public double getSine(double angleBeforeSineCalc) {
-        this.angleBeforeSineCalc = angleBeforeSineCalc;
-        return sineCalcResult = Math.sin(angleBeforeSineCalc);
-    }
-
     /* Array */
-
-    public void findMaxInAnArray(int[] array) {
-        int max = array[0];
-        for (int i = 0; i < array.length; i++) {
-            if (max < array[i])
-                max = array[i];
-        }
-        System.out.println("Maximum in an array: " + max);
-    }
 
     public void storeResultInAnArray(Object[][] twoDimArray) {
         for (int row = 0; row < twoDimArray.length; row++) {
@@ -79,6 +64,7 @@ public class Calculator {
             System.out.println();
         }
     }
+
 
 }
 
